@@ -12,7 +12,6 @@ module.exports = {
       "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=RHM.DE&apikey=" + process.env.FUNKY_KEY;
     const res = await fetch(url);
     const json = await res.json();
-    console.log(json)
     let stock = json["Time Series (Daily)"];
     const today = stock[Object.keys(stock).at(0)];
     const green =
